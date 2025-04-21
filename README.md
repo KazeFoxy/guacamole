@@ -3,6 +3,10 @@ Bastion Guacamole
 
 ## Installation des paquets
 
+```bash
+sudo apt update
+```
+
 ```
 sudo apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
 ```
