@@ -4,7 +4,7 @@ Bastion Guacamole
 ## Installation des paquets
 
 ```
-apt install -y vim git podman
+apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
 ```
 
 ## Commande pour créer les cerficats SSL
