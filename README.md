@@ -1,6 +1,11 @@
 # guacamole
 Bastion Guacamole
 
+## Installation des paquets
+
+```
+apt install -y vim git podman
+```
 
 ## Commande pour créer les cerficats SSL
 
