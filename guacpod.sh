@@ -5,7 +5,7 @@ podman pod create --name Bastion_Guacamole --publish 80:80 --publish 443:443 --p
 
 # Conteneur MariaDB
 podman run -d --name GSB_mariadb --pod Bastion_Guacamole \
-  -v ~/guacamole/mysql:/tmp/mysql-scripts:ro \
+  -v ~/template/mysql:/tmp/mysql-scripts:ro \
   -v Bastion_Volumes-Bastion_DB:/var/lib/mysql \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
@@ -47,9 +47,9 @@ podman run -d --name GSB_guacamole --pod Bastion_Guacamole \
 
 # Conteneur nginx
 podman run -d --name GSB_nginx_ssl --pod Bastion_Guacamole \
-  -v ~/guacamole/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+  -v ~/template/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
   -v Bastion_Volumes-Bastion_NGINX:/etc/nginx/conf.d \
-  -v ~/guacamole/nginx/ssl:/etc/nginx/ssl:ro \
+  -v ~/template/nginx/ssl:/etc/nginx/ssl:ro \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -e TZ=Europe/Paris \
