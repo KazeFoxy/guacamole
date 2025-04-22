@@ -1,6 +1,7 @@
 # guacamole
 Bastion Guacamole
 
+
 ## Installation des paquets
 
 ```bash
@@ -10,6 +11,7 @@ sudo apt update
 ```bash
 sudo apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
 ```
+
 
 ## Création du dossier ~/template
 
@@ -21,11 +23,13 @@ mkdir ~/template/nginx/ssl
 ```
 > :bulb: Il faut mettre le fichiere nginx.conf dans le dossier ~/template/nginx !
 
+
 ## Commande pour créer les cerficats SSL
 
 ```bash
 openssl req -newkey rsa:2048 -nodes -keyout ~/template/nginx/ssl/privkey.pem -x509 -out ~/template/nginx/ssl/fullchain.pem -days 365
 ```
+
 
 ## Récupérer les .sql
 
@@ -37,11 +41,13 @@ cp ./guacamole-client/extensions/guacamole-auth-jdbc/modules/guacamole-auth-jdbc
 cp ./guacamole-client/extensions/guacamole-auth-jdbc/modules/guacamole-auth-jdbc-mysql/schema/002-create-admin-user.sql ~/template/mysql/
 ```
 
+
 ## Lancement du script de déploiement du pod Bastion_Guacamole
 
 ```bash
 sudo bash guacpod.sh
 ```
+
 
 ## Finalisation de la database pour guacamole
 
@@ -64,9 +70,15 @@ SHOW TABLES;
 ```
 > :bulb: Permet de voir si les tables ont bien été créées
 
+
 ## Accèder au web GUI Guacamole
 
 http://192.168.x.x:8080/guacamole/
+
+Si le reverse proxy nginx et les certificats fonctionne bien :
+
+https://192.168.x.x:8080/guacamole/
+
 
 ## Podman Tips & Tricks
 
@@ -91,6 +103,7 @@ Stopper le pod Bastion_Guacamole :
 ```bash
 podman pod stop Bastion_Guacamole
 ```
+
 
 ### Commandes Avancer : 
 
