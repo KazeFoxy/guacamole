@@ -69,17 +69,17 @@ podman pod stop Bastion_Guacamole
 
 ### Commandes Avancer : 
 
-Entrée dans le conteneur GSB_nginx_ssl en bash
+Entrée dans le conteneur GSB_nginx_ssl en bash :
 ```bash
  podman exec -it GSB_nginx_ssl bash
 ```
 
-Faire un test du nginx.conf du conteneur GSB_nginx_ssl
+Faire un test du nginx.conf du conteneur GSB_nginx_ssl :
 ```bash
 podman exec -it GSB_nginx_ssl nginx -t
 ```
 
-Faire un cat de /etc/nginx/nginx.conf du conteneur GSB_nginx_ssl
+Faire un cat de /etc/nginx/nginx.conf du conteneur GSB_nginx_ssl : 
 ```bash
 podman exec -it GSB_nginx_ssl cat /etc/nginx/nginx.conf
 ```
