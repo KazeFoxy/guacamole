@@ -17,6 +17,7 @@ sudo apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
 mkdir ~/template
 mkdir ~/template/nginx
 mkdir ~/template/mysql
+mkdir ~/template/nginx/ssl
 ```
 > :bulb: Il faut mettre le fichiere nginx.conf dans le dossier ~/template/nginx
 
