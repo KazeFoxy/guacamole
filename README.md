@@ -34,7 +34,6 @@ test
 
 ```
 cd ~/template/nginx/ssl
-
 openssl req -x509 -nodes -days 365 \
   -newkey rsa:2048 \
   -keyout ~/template/nginx/ssl/self-ssl.key \
