@@ -48,8 +48,8 @@ podman run -d --name GSB_guacamole --pod Bastion_Guacamole \
 # Conteneur nginx
 podman run -d --name GSB_nginx_ssl --pod Bastion_Guacamole \
   -v ~/template/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
-  -v Bastion_Volumes-Bastion_NGINX:/etc/nginx/conf.d \
-  -v ~/template/nginx/ssl:/etc/nginx/ssl:ro \
+  -v ~/template/nginx/conf.d/:/etc/nginx/conf.d \
+  -v ~/template/nginx/ssl:/etc/nginx/ssl/:ro \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -e TZ=Europe/Paris \
