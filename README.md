@@ -39,6 +39,8 @@ cp ./guacamole-client/extensions/guacamole-auth-jdbc/modules/guacamole-auth-jdbc
 
 ## Lancement du script de déploiement du pod Bastion_Guacamole
 
+### Commandes de bases
+
 ```bash
 sudo bash guacpod.sh
 ```
@@ -63,4 +65,33 @@ podman pod start Bastion_Guacamole
 Stopper le pod Bastion_Guacamole :
 ```bash
 podman pod stop Bastion_Guacamole
+```
+
+### Commandes Avancer
+
+Entrée dans le conteneur GSB_nginx_ssl en bash
+```bash
+ podman exec -it GSB_nginx_ssl bash
+```
+
+Faire un test du nginx.conf du conteneur GSB_nginx_ssl
+```bash
+podman exec -it GSB_nginx_ssl nginx -t
+```
+
+Faire un cat de /etc/nginx/nginx.conf du conteneur GSB_nginx_ssl
+```bash
+podman exec -it GSB_nginx_ssl cat /etc/nginx/nginx.conf
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
 ```
