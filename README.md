@@ -45,22 +45,22 @@ sudo bash guacpod.sh
 
 ## Podman Tips & Tricks
 
-Voir les conteneurs
+Voir les conteneurs :
 ```bash
 podman ps -psa
 ```
 
-Voir les pods
+Voir les pods :
 ```bash
 podman pod ps
 ```
 
-Lancer le pod Bastion_Guacamole
+Lancer le pod Bastion_Guacamole :
 ```bash
 podman pod start Bastion_Guacamole
 ```
 
-Stopper le pod Bastion_Guacamole
+Stopper le pod Bastion_Guacamole :
 ```bash
 podman pod stop Bastion_Guacamole
 ```
