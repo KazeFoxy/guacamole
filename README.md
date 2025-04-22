@@ -11,6 +11,8 @@ sudo apt update
 sudo apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
 ```
 
+## Créatino du dossier ~/template
+
 ```bash
 mkdir ~/template
 mkdir ~/template/nginx
