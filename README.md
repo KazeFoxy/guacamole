@@ -64,6 +64,10 @@ SHOW TABLES;
 ```
 > :bulb: Permet de voir si les tables ont bien été créées
 
+## Accèder au web GUI Guacamole
+
+http://192.168.x.x:8080/guacamole/
+
 ## Podman Tips & Tricks
 
 ### Commandes de bases :
