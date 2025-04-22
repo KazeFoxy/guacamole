@@ -84,15 +84,16 @@ Faire un cat de /etc/nginx/nginx.conf du conteneur GSB_nginx_ssl :
 podman exec -it GSB_nginx_ssl cat /etc/nginx/nginx.conf
 ```
 
+Rédemarrer le service nginx du conteneur GSB_nginx_ssl
+```bash
+podman exec -it GSB_nginx_ssl nginx -s reload
+```
+
 Entrée dans le conteneur GSB_mariadb en commande MariaDB
 ```bash
 podman exec -it GSB_mariadb mariadb -u root -p
 ```
 > :bulb: Il faut mettre le mot de passe de la database MariaDB !
-
-```bash
-
-```
 
 ```bash
 
