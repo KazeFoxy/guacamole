@@ -77,12 +77,7 @@ SHOW TABLES;
 
 ## Accèder au web GUI Guacamole
 
-http://192.168.x.x:8080/guacamole/
-
-Si le reverse proxy nginx et les certificats fonctionne bien :
-
-https://192.168.x.x:8080/guacamole/
-
+https://192.168.x.x/
 
 ## Podman Tips & Tricks
 
