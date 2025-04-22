@@ -18,6 +18,7 @@ mkdir ~/template
 mkdir ~/template/nginx
 mkdir ~/template/mysql
 ```
+> :bulb: Il faut mettre le fichiere nginx.conf dans le dossier ~/template/nginx
 
 ## Commande pour créer les cerficats SSL
 
