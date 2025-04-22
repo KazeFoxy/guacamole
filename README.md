@@ -48,6 +48,7 @@ sudo bash guacpod.sh
 ```bash
 podman exec -it GSB_mariadb mariadb -u root -p
 ```
+> :bulb: Il faut mettre le mot de passe de la database MariaDB !
 
 ```
 USE guacamoledb;
