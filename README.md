@@ -20,6 +20,7 @@ mkdir ~/template
 mkdir ~/template/nginx
 mkdir ~/template/mysql
 mkdir ~/template/nginx/ssl
+mkdir ~/template/nginx/conf.d/
 ```
 > :bulb: Il faut mettre le fichiere nginx.conf dans le dossier ~/template/nginx !
 
@@ -74,8 +75,14 @@ SHOW TABLES;
 ```
 > :bulb: Permet de voir si les tables ont bien été créées
 
-
 ## Accèder au web GUI Guacamole
+
+Rédémarrer le conteneur nginx
+```bash
+podman restart GSB_nginx
+```
+
+Puis accèder au web gui avec le lien ci-dessous :
 
 https://192.168.x.x/
 
@@ -106,38 +113,38 @@ podman pod stop Bastion_Guacamole
 
 ### Commandes Avancer : 
 
-Entrée dans le conteneur GSB_nginx_ssl en bash :
+Entrée dans le conteneur GSB_nginx en bash :
 ```bash
- podman exec -it GSB_nginx_ssl bash
+ podman exec -it GSB_nginx bash
 ```
 
-Faire un test du nginx.conf du conteneur GSB_nginx_ssl :
+Faire un test du nginx.conf du conteneur GSB_nginx :
 ```bash
-podman exec -it GSB_nginx_ssl nginx -t
+podman exec -it GSB_nginx nginx -t
 ```
 
-Faire un cat de /etc/nginx/nginx.conf du conteneur GSB_nginx_ssl : 
+Faire un cat de /etc/nginx/nginx.conf du conteneur GSB_nginx : 
 ```bash
-podman exec -it GSB_nginx_ssl cat /etc/nginx/nginx.conf
+podman exec -it GSB_nginx cat /etc/nginx/nginx.conf
 ```
 
-Rédemarrer le service nginx du conteneur GSB_nginx_ssl
+Rédemarrer le service nginx du conteneur GSB_nginx :
 ```bash
-podman exec -it GSB_nginx_ssl nginx -s reload
+podman exec -it GSB_nginx nginx -s reload
 ```
 
-Entrée dans le conteneur GSB_mariadb en commande MariaDB
+Entrée dans le conteneur GSB_mariadb en commande MariaDB :
 ```bash
 podman exec -it GSB_mariadb mariadb -u root -p
 ```
 > :bulb: Il faut mettre le mot de passe de la database MariaDB !
 
-Faire un apt update et apt install net-tools dans le conteneur GSB_nginx_ssl
+Faire un apt update et apt install net-tools dans le conteneur GSB_nginx :
 ```bash
-podman exec -it GSB_nginx_ssl apt-get update && apt-get install net-tools
+podman exec -it GSB_nginx apt-get update && apt-get install net-tools
 ```
 
-Faire netstat -tuln | grep :80 dans le conteneur GSB_nginx_ssl
+Faire netstat -tuln | grep :80 dans le conteneur GSB_nginx :
 ```bash
-podman exec -it GSB_nginx_ssl netstat -tuln | grep :80
+podman exec -it GSB_nginx netstat -tuln | grep :80
 ```
