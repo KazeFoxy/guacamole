@@ -30,6 +30,18 @@ mkdir ~/template/nginx/ssl
 openssl req -newkey rsa:2048 -nodes -keyout ~/template/nginx/ssl/privkey.pem -x509 -out ~/template/nginx/ssl/fullchain.pem -days 365
 ```
 
+test 
+
+```
+cd ~/template/nginx/ssl
+
+openssl req -x509 -nodes -days 365 \
+  -newkey rsa:2048 \
+  -keyout ~/template/nginx/ssl/self-ssl.key \
+  -out ~/template/nginx/ssl/self.cert \
+  -subj "/C=FR/ST=Bourgogne/L=Dijon/O=GSB/OU=IT/CN=gsb.lan"
+```
+
 
 ## Récupérer les .sql
 
