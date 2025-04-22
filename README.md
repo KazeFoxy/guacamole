@@ -43,6 +43,21 @@ cp ./guacamole-client/extensions/guacamole-auth-jdbc/modules/guacamole-auth-jdbc
 sudo bash guacpod.sh
 ```
 
+## Finalisation de la database pour guacamole
+
+```bash
+podman exec -it GSB_mariadb mariadb -u root -p
+```
+
+```
+USE guacamoledb;
+```
+
+```
+SOURCE /tmp/mysql-scripts/001-create-schema.sql;
+SOURCE /tmp/mysql-scripts/002-create-admin-user.sql;
+```
+
 ## Podman Tips & Tricks
 
 ### Commandes de bases :
