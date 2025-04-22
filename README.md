@@ -58,6 +58,11 @@ SOURCE /tmp/mysql-scripts/001-create-schema.sql;
 SOURCE /tmp/mysql-scripts/002-create-admin-user.sql;
 ```
 
+``` 
+SHOW TABLES;
+```
+> :bulb: Permet de voir si les tables ont bien été créées
+
 ## Podman Tips & Tricks
 
 ### Commandes de bases :
