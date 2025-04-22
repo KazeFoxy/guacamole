@@ -95,6 +95,12 @@ podman exec -it GSB_mariadb mariadb -u root -p
 ```
 > :bulb: Il faut mettre le mot de passe de la database MariaDB !
 
+Faire un apt update et apt install net-tools dans le conteneur GSB_nginx_ssl
 ```bash
+podman exec -it GSB_nginx_ssl apt-get update && apt-get install net-tools
+```
 
+Faire netstat -tuln | grep :80 dans le conteneur GSB_nginx_ssl
+```bash
+podman exec -it GSB_nginx_ssl netstat -tuln | grep :80
 ```
