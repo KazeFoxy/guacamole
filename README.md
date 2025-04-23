@@ -104,6 +104,7 @@ Lancer le pod Bastion_Guacamole :
 ```bash
 podman pod start Bastion_Guacamole
 ```
+> :bulb: Le pod est a démarrer si la machine a été éteint !
 
 Stopper le pod Bastion_Guacamole :
 ```bash
