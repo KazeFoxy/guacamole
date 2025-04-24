@@ -8,7 +8,7 @@ sudo apt update
 ```
 
 ```bash
-sudo apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
+sudo apt install -y sudo vim git curl wget net-tools podman cockpit cockpit-podman
 ```
 
 > :bulb: Faire un ```git clone https://github.com/KazeFoxy/guacamole.git``` puis ```mv -f ~/guacamole/* ~/```, il faudra seulement créer les certificats SSL puis lancer le script
