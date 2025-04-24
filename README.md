@@ -11,7 +11,7 @@ sudo apt update
 sudo apt install -y vim git curl wget net-tools podman cockpit cockpit-podman
 ```
 
-> :bulb: Pour passer certaines étapes tel que les mkdir, faire un ```git clone  ``` puis ```mv -f ~/guacamole/* ~/``` 
+> :bulb: Pour passer certaines étapes tel que les mkdir, faire un ```git clone https://github.com/KazeFoxy/guacamole.git``` puis ```mv -f ~/guacamole/* ~/``` 
 
 ## Création du dossier ~/template
 
