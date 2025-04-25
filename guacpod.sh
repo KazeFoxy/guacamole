@@ -6,7 +6,6 @@ podman pod create --name Bastion_Guacamole --publish 80:80 --publish 443:443 --p
 # Conteneur MariaDB
 podman run -d --name GSB_mariadb --pod Bastion_Guacamole \
   -v ~/template/mysql:/tmp/mysql-scripts:ro \
-  -v Bastion_Volumes-Bastion_DB:/var/lib/mysql \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -e MYSQL_ROOT_PASSWORD=changeme \
@@ -18,7 +17,6 @@ podman run -d --name GSB_mariadb --pod Bastion_Guacamole \
 
 # Conteneur guacd
 podman run -d --name GSB_guacd --pod Bastion_Guacamole \
-  -v Bastion_Volumes-Bastion_records:/var/tmp/binary/ \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -v Bastion_Volumes-Bastion_Share:/Download \
@@ -27,9 +25,6 @@ podman run -d --name GSB_guacd --pod Bastion_Guacamole \
 
 # Conteneur guacamole
 podman run -d --name GSB_guacamole --pod Bastion_Guacamole \
-  -v Bastion_Volumes-Bastion_extensions:/home/guacamole/ \
-  -v Bastion_Volumes-Bastion_opt:/opt/guacamole/ \
-  -v Bastion_Volumes-Bastion_records:/var/lib/guacamole/recordings/ \
   -v /etc/timezone:/etc/timezone:ro \
   -v /etc/localtime:/etc/localtime:ro \
   -e TZ=Europe/Paris \
